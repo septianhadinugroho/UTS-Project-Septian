@@ -6,7 +6,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:padding="16dp"
+    android:background="#FAFAFA"
+    android:padding="24dp"
     tools:context=".OrderActivity">
 
         <!-- Judul Halaman -->
@@ -17,23 +18,28 @@
             android:text="Order Food"
             android:textSize="24sp"
             android:textStyle="bold"
+            android:textColor="#000000"
             android:layout_gravity="center_horizontal"
-            android:layout_marginBottom="16dp"/>
+            android:padding="8dp"
+            android:layout_marginBottom="20dp"/>
 
-        <!-- Input Nama Makanan -->
+        <!-- Spinner Nama Makanan -->
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Food Name"
             android:textSize="18sp"
+            android:textColor="#000000"
+            android:padding="8dp"
             android:layout_marginBottom="8dp"/>
-        <TextView
-            android:id="@+id/etFoodName"
+        <Spinner
+            android:id="@+id/spinnerFoodName"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Enter food name - Get From List"
+            android:background="@drawable/edit_text_background"
             android:padding="12dp"
-            android:layout_marginBottom="16dp"/>
+            android:layout_marginBottom="16dp"
+            android:textColor="#000000"/>
 
         <!-- Input Jumlah Porsi -->
         <TextView
@@ -41,31 +47,38 @@
             android:layout_height="wrap_content"
             android:text="Number of Servings"
             android:textSize="18sp"
+            android:textColor="#000000"
+            android:padding="8dp"
             android:layout_marginBottom="8dp"/>
         <EditText
             android:id="@+id/etServings"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:textColor="#000000"
             android:hint="Enter number of servings"
+            android:background="@drawable/edit_text_background"
             android:inputType="number"
             android:padding="12dp"
             android:layout_marginBottom="16dp"/>
 
-        <!-- Input Jumlah Porsi -->
+        <!-- Input Nama Pemesan -->
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Ordering Name"
             android:textSize="18sp"
+            android:textColor="#000000"
+            android:padding="8dp"
             android:layout_marginBottom="8dp"/>
         <EditText
             android:id="@+id/etName"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Ordering name by"
+            android:textColor="#000000"
+            android:background="@drawable/edit_text_background"
             android:padding="12dp"
             android:layout_marginBottom="16dp"/>
-
 
         <!-- Input Catatan Tambahan -->
         <TextView
@@ -73,12 +86,16 @@
             android:layout_height="wrap_content"
             android:text="Additional Notes"
             android:textSize="18sp"
+            android:textColor="#000000"
+            android:padding="8dp"
             android:layout_marginBottom="8dp"/>
         <EditText
             android:id="@+id/etNotes"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Enter any additional notes"
+            android:textColor="#000000"
+            android:background="@drawable/edit_text_background"
             android:padding="12dp"
             android:layout_marginBottom="16dp"/>
 
@@ -86,9 +103,12 @@
         <Button
             android:id="@+id/btnOrder"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="50dp"
             android:text="Place Order"
+            android:backgroundTint="#FF9800"
             android:textColor="@android:color/white"
-            android:padding="12dp"/>
-
+            android:textStyle="bold"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:elevation="4dp"/>
 </LinearLayout>

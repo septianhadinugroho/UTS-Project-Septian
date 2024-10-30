@@ -23,7 +23,6 @@ class ListFoodActivity : AppCompatActivity() {
         recyclerView = findViewById(R.id.recyclerView)
         recyclerView.layoutManager = LinearLayoutManager(this)
 
-        // Menyiapkan data makanan
         foodList = listOf(
             Food("Batagor", "Batagor asli enak dari Bandung", R.drawable.batagor),
             Food("Black Salad", "Salad segar yang dibuat secara langsung", R.drawable.black_salad),
@@ -36,10 +35,11 @@ class ListFoodActivity : AppCompatActivity() {
         adapter = FoodAdapter(foodList)
         recyclerView.adapter = adapter
 
-        // Fungsi untuk tombol "Pesan Sekarang"
         val btnPesan: Button = findViewById(R.id.btnpesan)
         btnPesan.setOnClickListener {
+            val foodNames = foodList.map { it.name }
             val intent = Intent(this, OrderActivity::class.java)
+            intent.putStringArrayListExtra("foodNames", ArrayList(foodNames))
             startActivity(intent)
         }
 
